@@ -19,7 +19,7 @@ export function* alertShowWorker() {
 }
 
 export function* alertShowGlobalWorker() {
-  yield timer(2000);
+  yield timer(10000);
   const { alertType, id, text } = yield select(state => state.currentAlert);
   yield put({ type: 'ADD_TO_SHOWN_GLOBAL_ALERT', payload: { alertType, id, text } })
 }
